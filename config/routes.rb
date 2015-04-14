@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :feijaos
+
   resources :posts do
     resources :comments, :only => [:create]
   end

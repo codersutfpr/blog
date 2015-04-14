@@ -1,0 +1,25 @@
+<%= form_for(@feijao) do |f| %>
+  <% if @feijao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feijao.errors.count, "error") %> prohibited this feijao from being saved:</h2>
+
+      <ul>
+      <% @feijao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :preco %><br>
+    <%= f.text_field :preco %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
