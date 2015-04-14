@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @feijo.tipo %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @feijo.preco %>
+</p>
+
+<%= link_to 'Edit', edit_feijo_path(@feijo) %> |
+<%= link_to 'Back', feijos_path %>

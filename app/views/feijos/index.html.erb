@@ -1,0 +1,27 @@
+<h1>Listing feijos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Preco</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feijos.each do |feijo| %>
+      <tr>
+        <td><%= feijo.tipo %></td>
+        <td><%= feijo.preco %></td>
+        <td><%= link_to 'Show', feijo %></td>
+        <td><%= link_to 'Edit', edit_feijo_path(feijo) %></td>
+        <td><%= link_to 'Destroy', feijo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Feijo', new_feijo_path %>

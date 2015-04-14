@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :feijos
+
   resources :feijaos
 
   resources :posts do
